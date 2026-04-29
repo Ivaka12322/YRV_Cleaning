@@ -127,8 +127,8 @@ export default function HomePage() {
                   <ShieldCheck size={16} color="#FF6B35" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-white leading-none">Доверен</p>
-                  <p className="text-xs text-gray-500 leading-none mt-0.5">Професионалист</p>
+                  <p className="text-xs font-bold text-white leading-none">Доверени</p>
+                  <p className="text-xs text-gray-500 leading-none mt-0.5">Професионалисти</p>
                 </div>
               </div>
             </div>
