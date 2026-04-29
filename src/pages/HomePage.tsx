@@ -106,8 +106,8 @@ export default function HomePage() {
                   <Calendar size={16} color="#FF6B35" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-white leading-none">Бърза онлайн</p>
-                  <p className="text-xs text-gray-500 leading-none mt-0.5">резервация</p>
+                  <p className="text-xs font-bold text-white leading-none">Бърз</p>
+                  <p className="text-xs text-gray-500 leading-none mt-0.5">Отговор</p>
                 </div>
               </div>
 
