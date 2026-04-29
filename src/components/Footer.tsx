@@ -7,10 +7,10 @@ interface FooterProps {
 }
 
 const footerLinks = [
-  { label: 'Privacy Policy', path: '/privacy' },
-  { label: 'Terms of Service', path: '/terms' },
-  { label: 'FAQ', path: '/faq' },
-  { label: 'Careers', path: '/careers' },
+  { label: 'Начало', path: '/' },
+  { label: 'Услуги', path: '/services' },
+  { label: 'За нас', path: '/about' },
+  { label: 'Контакти', path: '/contact' },
 ];
 
 export default function Footer({ variant = 'simple' }: FooterProps) {
@@ -37,10 +37,10 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
             <div>
               <h4 className="text-sm font-semibold text-white uppercase tracking-widest mb-4">Връзки</h4>
               <ul className="space-y-2">
-                <li><Link to="/privacy" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/terms" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">Terms of Service</Link></li>
-                <li><Link to="/faq" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">FAQ</Link></li>
-                <li><Link to="/careers" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">Careers</Link></li>
+                <li><Link to="/" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">Начало</Link></li>
+                <li><Link to="/services" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">Услуги</Link></li>
+                <li><Link to="/about" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">За нас</Link></li>
+                <li><Link to="/contact" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">Контакти</Link></li>
               </ul>
             </div>
 
