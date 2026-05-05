@@ -195,8 +195,8 @@ export default function HomePage() {
                   <Sparkles size={16} color="#FF6B35" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-white leading-none">Еко</p>
-                  <p className="text-xs text-gray-500 leading-none mt-0.5">Препарати</p>
+                  <p className="text-xs font-bold text-white leading-none">10+</p>
+                  <p className="text-xs text-gray-500 leading-none mt-0.5">Години опит</p>
                 </div>
               </div>
             </div>
