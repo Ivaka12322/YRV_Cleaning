@@ -613,7 +613,7 @@ export default function HomePage() {
           {/* Desktop: 3 columns, Mobile: hidden for compact view */}
           <div className="hidden md:grid grid-cols-3 gap-5 mb-12">
             {[
-              { icon: <Phone size={24} />, label: 'Обадете се', info: '+359 888 123 456' },
+              { icon: <Phone size={24} />, label: 'Обадете се', info: '+359 892 426 296' },
               { icon: <MessageSquare size={24} />, label: 'Пишете ни', info: 'office@yrv.bg' },
               { icon: <Clock size={24} />, label: 'Работно Време', info: 'Пон-Пет: 8:00-18:00' },
             ].map((item) => (
