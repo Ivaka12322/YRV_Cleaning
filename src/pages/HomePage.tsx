@@ -172,7 +172,7 @@ export default function HomePage() {
                 {[
                   { label: '500+', sub: 'Доволни клиенти' },
                   { label: '24/7', sub: 'Бърза реакция' },
-                  { label: '11', sub: 'Вида услуги' },
+                  { label: '100%', sub: 'Kачество' },
                 ].map((stat) => (
                   <div key={stat.label}>
                     <p
