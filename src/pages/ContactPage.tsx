@@ -1,4 +1,4 @@
-import { Phone, Mail, Clock, Globe, Instagram, Youtube, Send, User } from 'lucide-react';
+import { Phone, Mail, MapPin, Globe, Instagram, Youtube, Send, User } from 'lucide-react';
 import { useForm, ValidationError } from '@formspree/react';
 import Footer from '../components/Footer';
 import Animate from '../components/Animate';
@@ -254,16 +254,16 @@ export default function ContactPage() {
                         Имейл
                       </p>
                       <a
-                        href="mailto:office@yrv.bg"
+                        href="mailto:Office@yrv-proclean.bg"
                         className="text-base font-medium text-white hover:text-orange-500 transition-colors"
                       >
-                        office@yrv.bg
+                        Office@yrv-proclean.bg
                       </a>
                     </div>
                   </div>
                 </div>
 
-                {/* Working Hours */}
+                {/* Address */}
                 <div
                   className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-5 rounded-xl"
                   style={{
@@ -275,19 +275,16 @@ export default function ContactPage() {
                     className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{ background: 'rgba(255,107,53,0.18)' }}
                   >
-                    <Clock size={20} color="#FF6B35" />
+                    <MapPin size={20} color="#FF6B35" />
                   </div>
                   <div className="text-center sm:text-left">
                     <p
                       className="text-xs font-semibold uppercase tracking-widest mb-2"
                       style={{ color: '#FF6B35', letterSpacing: '0.14em' }}
                     >
-                      Работно Време
+                      Адрес
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-x-8 gap-y-1">
-                      <p className="text-sm text-white">Понеделник – Петък: 08:00 – 19:00</p>
-                      <p className="text-sm text-gray-400">Събота: 09:00 – 14:00</p>
-                    </div>
+                    <p className="text-sm text-white">гр.София жк. Кръстова вада, Ген. Иван Колев, 25</p>
                   </div>
                 </div>
 

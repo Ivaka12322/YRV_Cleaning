@@ -226,7 +226,7 @@ export default function ServiceDetailPage() {
                   </a>
 
                   <a
-                    href="mailto:office@yrv.bg"
+                    href="mailto:Office@yrv-proclean.bg"
                     className="flex items-center gap-3 text-white hover:text-white/80 transition-colors"
                   >
                     <div
@@ -235,7 +235,7 @@ export default function ServiceDetailPage() {
                     >
                       <Mail size={16} color="white" />
                     </div>
-                    <span className="text-base">office@yrv.bg</span>
+                    <span className="text-base">Office@yrv-proclean.bg</span>
                   </a>
                 </div>
 
@@ -279,7 +279,7 @@ export default function ServiceDetailPage() {
             +359 892 426 296
           </a>
           <a
-            href="mailto:office@yrv.bg"
+            href="mailto:Office@yrv-proclean.bg"
             className="px-5 py-3.5 rounded-xl font-bold text-white flex items-center justify-center gap-2 text-sm"
             style={{ background: '#1A1A1A', border: '1px solid rgba(255,255,255,0.15)' }}
           >

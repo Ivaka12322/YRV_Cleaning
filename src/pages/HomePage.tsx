@@ -77,9 +77,9 @@ export default function HomePage() {
         />
 
         {/* Contact Info Bubble */}
-        <div className="w-full px-4 sm:px-6 pt-3 pb-1 relative z-30">
+        <div className="w-full px-4 sm:px-6 pt-3 pb-1 relative z-30 flex justify-center">
           <div
-            className="max-w-7xl mx-auto rounded-full px-4 sm:px-6 py-2.5"
+            className="rounded-full px-4 sm:px-6 py-2.5"
             style={{
               background: 'linear-gradient(135deg, #FF6B35, #FF8C5A)',
               boxShadow: '0 4px 20px rgba(255,107,53,0.35)',
@@ -682,8 +682,8 @@ export default function HomePage() {
           <div className="hidden md:grid grid-cols-3 gap-5 mb-12">
             {[
               { icon: <Phone size={24} />, label: 'Обадете се', info: '+359 892 426 296' },
-              { icon: <MessageSquare size={24} />, label: 'Пишете ни', info: 'office@yrv.bg' },
-              { icon: <Clock size={24} />, label: 'Работно Време', info: 'Пон-Пет: 8:00-18:00' },
+              { icon: <MessageSquare size={24} />, label: 'Пишете ни', info: 'Office@yrv-proclean.bg' },
+              { icon: <MapPin size={24} />, label: 'Адрес', info: 'жк. Кръстова вада, Ген. Иван Колев, 25' },
             ].map((item) => (
               <div
                 key={item.label}
@@ -700,7 +700,7 @@ export default function HomePage() {
           {/* Mobile: compact contact info */}
           <div className="md:hidden mb-6 space-y-2 text-sm text-white/90">
             <p>Обадете се: <span className="font-semibold">+359 892 426 296</span></p>
-            <p>Имейл: <span className="font-semibold">office@yrv.bg</span></p>
+            <p>Имейл: <span className="font-semibold">Office@yrv-proclean.bg</span></p>
           </div>
 
           <Link
