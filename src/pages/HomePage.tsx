@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight, Phone, ShieldCheck, Clock, Eye, Star,
   ChevronLeft, ChevronRight, ChevronDown, Award, Gem,
-  MessageSquare, Calendar
+  MessageSquare, Calendar, Mail, MapPin, Sparkles
 } from 'lucide-react';
 import { services } from '../data/services';
 import Footer from '../components/Footer';
@@ -76,6 +76,52 @@ export default function HomePage() {
           }}
         />
 
+        {/* Contact Info Bubble */}
+        <div className="w-full px-4 sm:px-6 pt-3 pb-1 relative z-30">
+          <div
+            className="max-w-7xl mx-auto rounded-full px-4 sm:px-6 py-2.5"
+            style={{
+              background: 'linear-gradient(135deg, #FF6B35, #FF8C5A)',
+              boxShadow: '0 4px 20px rgba(255,107,53,0.35)',
+            }}
+          >
+            {/* Desktop: single row with separators */}
+            <div className="hidden sm:flex items-center justify-center gap-0 text-white text-xs font-medium flex-wrap">
+              <a href="mailto:Office@yrv-proclean.bg" className="flex items-center gap-1.5 hover:text-white/80 transition-colors px-3 py-0.5">
+                <Mail size={13} />
+                <span>Office@yrv-proclean.bg</span>
+              </a>
+              <span className="text-white/50 select-none">|</span>
+              <a href="tel:0892426296" className="flex items-center gap-1.5 hover:text-white/80 transition-colors px-3 py-0.5">
+                <Phone size={13} />
+                <span>0892 426 296</span>
+              </a>
+              <span className="text-white/50 select-none">|</span>
+              <span className="flex items-center gap-1.5 px-3 py-0.5">
+                <MapPin size={13} />
+                <span>гр.София жк. Кръстова вада, Ген. Иван Колев, 25</span>
+              </span>
+            </div>
+            {/* Mobile: stacked compact */}
+            <div className="sm:hidden flex flex-col items-center gap-1 text-white text-xs font-medium py-0.5">
+              <a href="mailto:Office@yrv-proclean.bg" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
+                <Mail size={12} />
+                <span>Office@yrv-proclean.bg</span>
+              </a>
+              <div className="flex items-center gap-3">
+                <a href="tel:0892426296" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
+                  <Phone size={12} />
+                  <span>0892 426 296</span>
+                </a>
+              </div>
+              <span className="flex items-center gap-1.5 text-center leading-tight">
+                <MapPin size={12} className="flex-shrink-0" />
+                <span>жк. Кръстова вада, Ген. Иван Колев, 25</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-6 w-full py-20 flex-1">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start h-full">
@@ -129,6 +175,28 @@ export default function HomePage() {
                 <div>
                   <p className="text-xs font-bold text-white leading-none">Доверени</p>
                   <p className="text-xs text-gray-500 leading-none mt-0.5">Професионалисти</p>
+                </div>
+              </div>
+
+              {/* Floating Badge: Premium Quality - bottom left */}
+              <div
+                className="absolute bottom-36 -left-6 flex items-center gap-3 px-4 py-3 rounded-xl"
+                style={{
+                  background: '#1A1A1A',
+                  border: '1px solid rgba(255,255,255,0.12)',
+                  boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                  zIndex: 6,
+                }}
+              >
+                <div
+                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(255,107,53,0.2)' }}
+                >
+                  <Sparkles size={16} color="#FF6B35" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-white leading-none">Еко</p>
+                  <p className="text-xs text-gray-500 leading-none mt-0.5">Препарати</p>
                 </div>
               </div>
             </div>
