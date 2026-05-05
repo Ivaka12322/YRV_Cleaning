@@ -177,7 +177,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     slug: 'abonamentno-pochistvane',
     title: 'Абонаментно почистване на офиси и домове',
     shortDescription: 'Редовно поддържане на чистотата с гъвкави графици и преференциални цени.',
@@ -249,7 +249,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     slug: 'prozortsi',
     title: 'Почистване и полиране на прозорци',
     shortDescription: 'Двустранно почистване на прозорци и дограма за кристална чистота.',
@@ -289,7 +289,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     slug: 'sled-remont',
     title: 'Почистване след ремонт',
     shortDescription: 'Премахване на строителни остатъци и пълно обновяване след ремонтни дейности.',
@@ -340,7 +340,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     slug: 'vhodove',
     title: 'Почистване на входове',
     shortDescription: 'Поддържане на стълбища, площадки и общи части в перфектно състояние.',
@@ -391,7 +391,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     slug: 'bedstviya',
     title: 'Почистване след наводнение, пожар и др.',
     shortDescription: 'Специализирано почистване и възстановяване след бедствия и аварии.',
@@ -445,7 +445,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     slug: 'garazh',
     title: 'Почистване на подземен гараж и общи части',
     shortDescription: 'Професионално почистване на гаражи, мазета и общи подземни помещения.',
@@ -499,7 +499,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     slug: 'tvardi-podove',
     title: 'Машинно почистване на твърди подови настилки',
     shortDescription: 'Специализирано машинно почистване на теракот, ламинат и паркет.',
@@ -553,7 +553,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     slug: 'konsumativи',
     title: 'Доставка на хигиенни консумативи и дезинфектанти',
     shortDescription: 'Професионални препарати и консумативи за поддържане на хигиената.',
@@ -607,7 +607,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     slug: 'dezinfekciya',
     title: 'Дезинфекция на често докосвани повърхности',
     shortDescription: 'Специализирана дезинфекция за максимална защита от бактерии и вируси.',
