@@ -276,7 +276,7 @@ export default function ServiceDetailPage() {
             style={{ background: 'linear-gradient(135deg, #FF6B35, #FF8C5A)' }}
           >
             <Phone size={16} />
-            +359 888 123 456
+            +359 892 426 296
           </a>
           <a
             href="mailto:office@yrv.bg"
