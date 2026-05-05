@@ -83,7 +83,7 @@ export default function HomePage() {
             <div className="relative order-2 lg:order-1 flex justify-center items-start lg:mt-0" style={{ zIndex: 5 }}>
               <div className="relative" style={{ filter: 'drop-shadow(0 32px 80px rgba(0,0,0,0.6))' }}>
                 <img
-                  src="public/New_hero_character.png"
+                  src="public/New_hero_character_no_bg.png"
                   alt="YRV Почистване - Работник с принадлежности"
                   className="object-contain"
                   style={{ maxHeight: '550px', width: 'auto' }}
