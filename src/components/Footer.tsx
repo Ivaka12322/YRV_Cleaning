@@ -25,7 +25,7 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
         }}
       >
         <div className="max-w-7xl mx-auto px-6 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
             {/* Brand */}
             <div>
               <div className="text-2xl font-bold text-white mb-1">YRV</div>
@@ -61,6 +61,44 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
                 </li>
                 <li className="text-sm text-gray-500">гр.София жк. Кръстова вада, Ген. Иван Колев, 25</li>
               </ul>
+            </div>
+
+            {/* Services Preview */}
+            <div>
+              <h4 className="text-sm font-semibold text-white uppercase tracking-widest mb-4">Услуги</h4>
+              <ul className="space-y-1">
+                {services.slice(0, 6).map((service) => (
+                  <li key={service.id}>
+                    <Link
+                      to={`/services/${service.slug}`}
+                      className="text-xs text-gray-500 hover:text-orange-500 transition-colors leading-relaxed truncate"
+                      title={service.title}
+                    >
+                      {service.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* All Services Row */}
+          <div
+            className="py-6 mb-6"
+            style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
+          >
+            <p className="text-xs font-semibold text-white uppercase tracking-widest mb-3">Всички услуги</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-2">
+              {services.map((service) => (
+                <Link
+                  key={service.id}
+                  to={`/services/${service.slug}`}
+                  className="text-xs text-gray-500 hover:text-orange-500 transition-colors leading-relaxed truncate"
+                  title={service.title}
+                >
+                  {service.title}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
