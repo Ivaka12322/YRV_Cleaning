@@ -67,10 +67,10 @@ export default function ContactPage() {
                       Телефон
                     </p>
                     <a
-                      href="tel:+359888123456"
+                      href="tel:+359 892 426 296"
                       className="text-base font-semibold text-white hover:text-orange-500 transition-colors"
                     >
-                      +359 888 123 456
+                      +359 892 426 296
                     </a>
                   </div>
                 </div>
