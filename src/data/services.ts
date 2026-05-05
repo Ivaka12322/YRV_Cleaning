@@ -70,7 +70,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 4,
+    id: 2,
     slug: 'mashinno-izpirane',
     title: 'Машинно изпиране',
     shortDescription: 'Дълбочинно почистване на мека мебел, килими, матраци и спални покрития.',
