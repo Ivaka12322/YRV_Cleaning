@@ -54,8 +54,8 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+359881234567" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">
-                    +359 88 123 4567
+                  <a href="tel:+359 892 426 296" className="text-sm text-gray-500 hover:text-orange-500 transition-colors">
+                    +359 892 426 296
                   </a>
                 </li>
                 <li className="text-sm text-gray-500">София, България</li>
