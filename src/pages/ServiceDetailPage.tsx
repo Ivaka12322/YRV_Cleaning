@@ -213,7 +213,7 @@ export default function ServiceDetailPage() {
                 {/* Contact Info */}
                 <div className="space-y-4 mb-7">
                   <a
-                    href="tel:+359888123456"
+                    href="tel:+359 892 426 296"
                     className="flex items-center gap-3 text-white hover:text-white/80 transition-colors"
                   >
                     <div
@@ -222,7 +222,7 @@ export default function ServiceDetailPage() {
                     >
                       <Phone size={16} color="white" />
                     </div>
-                    <span className="text-lg font-semibold">+359 888 123 456</span>
+                    <span className="text-lg font-semibold">+359 892 426 296</span>
                   </a>
 
                   <a
@@ -244,7 +244,7 @@ export default function ServiceDetailPage() {
 
                 {/* CTA Button */}
                 <a
-                  href="tel:+359888123456"
+                  href="tel:+359 892 426 296"
                   className="w-full py-4 rounded-xl font-bold text-orange-500 bg-white flex items-center justify-center transition-all duration-200 hover:bg-white/90 text-sm uppercase tracking-widest"
                   style={{ letterSpacing: '0.08em' }}
                 >
@@ -271,7 +271,7 @@ export default function ServiceDetailPage() {
       >
         <div className="flex gap-3">
           <a
-            href="tel:+359888123456"
+            href="tel:+359 892 426 296"
             className="flex-1 py-3.5 rounded-xl font-bold text-white flex items-center justify-center gap-2 text-sm"
             style={{ background: 'linear-gradient(135deg, #FF6B35, #FF8C5A)' }}
           >
