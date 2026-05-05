@@ -123,7 +123,7 @@ export const services: Service[] = [
     ],
   },
   {
-    id: 12,
+    id: 3,
     slug: 'stroitelni-obekti',
     title: 'Почистване на строителни обекти',
     shortDescription: 'Професионално почистване след ремонт и строителство с премахване на всички строителни отпадъци.',
