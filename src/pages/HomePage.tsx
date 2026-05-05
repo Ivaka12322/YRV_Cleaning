@@ -631,7 +631,7 @@ export default function HomePage() {
 
           {/* Mobile: compact contact info */}
           <div className="md:hidden mb-6 space-y-2 text-sm text-white/90">
-            <p>Обадете се: <span className="font-semibold">+359 888 123 456</span></p>
+            <p>Обадете се: <span className="font-semibold">+359 892 426 296</span></p>
             <p>Имейл: <span className="font-semibold">office@yrv.bg</span></p>
           </div>
 
