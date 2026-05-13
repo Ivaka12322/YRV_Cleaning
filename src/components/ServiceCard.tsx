@@ -51,6 +51,18 @@ export default function ServiceCard({ service, showButton = true }: ServiceCardP
         <h3 className="text-lg font-semibold text-white mb-3 leading-snug" style={{ letterSpacing: '-0.01em' }}>
           {service.title}
         </h3>
+
+        {/* Price Badge */}
+        <div
+          className="inline-block px-3 py-1.5 rounded-lg mb-3 text-xs font-semibold"
+          style={{
+            background: 'rgba(255,107,53,0.15)',
+            color: '#FF6B35',
+          }}
+        >
+          От {service.price}
+        </div>
+
         <p className="text-sm text-gray-500 leading-relaxed mb-6" style={{ lineHeight: '1.5' }}>
           {service.shortDescription}
         </p>

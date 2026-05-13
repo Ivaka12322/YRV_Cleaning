@@ -206,6 +206,15 @@ export default function ServiceDetailPage() {
                 >
                   Заявете {service.title.split(' ')[0].toLowerCase() === 'дезинфекция' ? 'дезинфекция' : 'услугата'}
                 </h3>
+
+                {/* Price Display */}
+                <div className="mb-5 p-3 rounded-lg" style={{ background: 'rgba(255,255,255,0.12)' }}>
+                  <p className="text-xs text-white/70 mb-1">Начална цена:</p>
+                  <p className="text-lg font-bold text-white" style={{ letterSpacing: '-0.01em' }}>
+                    {service.price}
+                  </p>
+                </div>
+
                 <p className="text-sm text-white/80 mb-7 leading-relaxed">
                   Свържете се с нас за безплатен оглед и индивидуална оферта, съобразена с вашите нужди.
                 </p>
