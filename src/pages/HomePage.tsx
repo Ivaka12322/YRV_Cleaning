@@ -563,7 +563,7 @@ export default function HomePage() {
                 style={{ height: '420px' }}
               >
                 <img
-                  src="/6.jpeg"
+                  src="/revision/chesto_zadavani_vuprosi.jpg"
                   alt="FAQ - Често задавани въпроси"
                   className="w-full h-full object-cover"
                 />
