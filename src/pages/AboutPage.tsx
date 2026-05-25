@@ -74,7 +74,7 @@ export default function AboutPage() {
 
             <Animate type="slide-right">
               <div
-                className="relative rounded-2xl overflow-hidden"
+                className="relative rounded-1.7xl overflow-hidden"
                 style={{ height: '480px', boxShadow: '0 16px 48px rgba(0,0,0,0.5)' }}
               >
                 <img
