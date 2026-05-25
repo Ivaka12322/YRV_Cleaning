@@ -37,6 +37,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  * {
+    text-align: center !important;
+  }
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
