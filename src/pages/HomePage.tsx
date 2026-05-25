@@ -132,7 +132,7 @@ export default function HomePage() {
                   src="/revision/new_character_no_bg.png"
                   alt="YRV Почистване - Работник с принадлежности"
                   className="object-contain"
-                  style={{ maxHeight: '700px', width: 'auto' }}
+                  style={{ maxHeight: '600px', width: 'auto' }}
                 />
               </div>
 
