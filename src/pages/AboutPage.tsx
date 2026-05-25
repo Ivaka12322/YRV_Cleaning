@@ -78,7 +78,7 @@ export default function AboutPage() {
                 style={{ height: '480px', boxShadow: '0 16px 48px rgba(0,0,0,0.5)' }}
               >
                 <img
-                  src="/2.jpg"
+                  src="/revision/Za_ns_-_do_koi_sme_nie.jpg"
                   alt="YRV Екип - Професионални почистващи услуги"
                   className="w-full h-full object-cover"
                 />
