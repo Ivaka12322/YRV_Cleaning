@@ -88,23 +88,25 @@ export default function ServiceDetailPage() {
     <div style={{ background: '#0A0A0A' }}>
       {/* Hero */}
       <section
-        className="relative pt-36 pb-20 overflow-hidden"
-        style={{ minHeight: '50vh' }}
+        className="relative pt-28 pb-10"
+        style={{ background: '#0A0A0A' }}
       >
-        {/* Full-brightness background image */}
-        <img
-          src={service.image}
-          alt={service.title}
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'brightness(0.9)' }}
-        />
-        {/* Subtle bottom gradient to anchor content */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{ background: 'linear-gradient(to top, rgba(10,10,10,0.5) 0%, transparent 60%)' }}
-        />
+        {/* Rounded image container */}
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="relative rounded-3xl overflow-hidden" style={{ minHeight: '480px' }}>
+            <img
+              src={service.image}
+              alt={service.title}
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ filter: 'brightness(0.9)' }}
+            />
+            {/* Gradient overlay for text legibility */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{ background: 'linear-gradient(to top, rgba(10,10,10,0.75) 0%, rgba(10,10,10,0.2) 60%, transparent 100%)' }}
+            />
 
-        <div className="relative max-w-7xl mx-auto px-6">
+        <div className="relative px-8 pt-16 pb-10 md:px-12 md:pt-20 md:pb-14 flex flex-col justify-end" style={{ minHeight: '480px' }}>
           {/* Localized text backdrop */}
           <div
             className="inline-block rounded-2xl px-7 py-6"
@@ -135,6 +137,8 @@ export default function ServiceDetailPage() {
             >
               {service.heroDescription}
             </p>
+          </div>
+        </div>
           </div>
         </div>
       </section>
