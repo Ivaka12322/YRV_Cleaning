@@ -23,7 +23,7 @@ export const services: Service[] = [
     title: 'Основно почистване на офиси и домове',
     shortDescription: 'Цялостно почистване на всички помещения с професионално оборудване и препарати.',
     heroDescription: 'Комплексно почистване на всяко помещение с висококачествени препарати и модерно оборудване. Гарантираме перфектни резултати при всяко посещение.',
-    image: '/1.jpg',
+    image: '/revision/osnovno_pochistvane_na_ofisi_i_domove.jpg',
     price: '2.50€/кв.м.',
     subsections: [
       {
@@ -77,7 +77,7 @@ export const services: Service[] = [
     title: 'Машинно изпиране',
     shortDescription: 'Дълбочинно почистване на мека мебел, килими, матраци и спални покрития.',
     heroDescription: 'Дълбочинно почистване с професионални машини за възстановяване на свежестта на вашите мебели и текстилни покрития. Ефективно отстраняване на петна, миризми и алергени.',
-    image: '/4.jpg',
+    image: '/revision/Mashinno_izpirane.jpg',
     price: 'По договаряне',
     subsections: [
       {
@@ -131,7 +131,7 @@ export const services: Service[] = [
     title: 'Почистване на строителни обекти',
     shortDescription: 'Професионално почистване след ремонт и строителство с премахване на всички строителни отпадъци.',
     heroDescription: 'Професионално почистване след ремонт и строителство с премахване на всички строителни отпадъци и прах. Гарантираме перфектна чистота и готовност за обитаване.',
-    image: '/5.webp',
+    image: '/revision/pochistvane_na_stroitelni_obekti.jpg',
     price: 'По договаряне',
     subsections: [
       {
@@ -186,7 +186,7 @@ export const services: Service[] = [
     title: 'Абонаментно почистване на офиси и домове',
     shortDescription: 'Редовно поддържане на чистотата с гъвкави графици и преференциални цени.',
     heroDescription: 'Редовно поддържане на чистотата с професионални стандарти. Идеално за офиси и домове, които изискват постоянна грижа и безупречна хигиена.',
-    image: '/2.jpg',
+    image: '/revision/abonamentno_pochistvane_na_ofisi_i_domove.jpg',
     price: '3.0€/кв.м.',
     subsections: [
       {
@@ -259,7 +259,7 @@ export const services: Service[] = [
     title: 'Почистване и полиране на прозорци',
     shortDescription: 'Двустранно почистване на прозорци и дограма за кристална чистота.',
     heroDescription: 'Професионално почистване за кристално чисти прозорци без петна и бели. Използваме специализирани антиалергенни препарати и техники за безупречен резултат.',
-    image: '/3.webp',
+    image: '/revision/pochistvane_i_polirane_na_prozorci.jpg',
     price: '2.50€/кв.м.',
     subsections: [
       {
@@ -300,7 +300,7 @@ export const services: Service[] = [
     title: 'Почистване след ремонт',
     shortDescription: 'Премахване на строителни остатъци и пълно обновяване след ремонтни дейности.',
     heroDescription: 'Специализирано почистване за превръщане на строителния обект в готов за обитаване дом или офис. Пълно отстраняване на строителен прах, боя и остатъци.',
-    image: '/5.webp',
+    image: '/revision/pochistvane_sled_remont.jpg',
     price: '3.0€/кв.м.',
     subsections: [
       {
@@ -352,7 +352,7 @@ export const services: Service[] = [
     title: 'Почистване на входове',
     shortDescription: 'Поддържане на стълбища, площадки и общи части в перфектно състояние.',
     heroDescription: 'Професионално поддържане на входове и общи части за приятна и чиста среда. Редовното почистване гарантира добро впечатление и хигиенична среда за всички жители.',
-    image: '/6.jpeg',
+    image: '/revision/pochistvane_na_vhodove.jpg',
     price: '4.30€ на апартамент на месец',
     subsections: [
       {
@@ -404,7 +404,7 @@ export const services: Service[] = [
     title: 'Почистване след наводнение, пожар и др.',
     shortDescription: 'Специализирано почистване и възстановяване след бедствия и аварии.',
     heroDescription: 'Специализирани услуги за възстановяване на помещения след бедствия и аварийни ситуации. Бързо и професионално връщане към нормално, безопасно състояние.',
-    image: '/7.webp',
+    image: '/revision/pochistvane_sled_navodnenie,_pojar,_dr.jpg',
     price: 'По договаряне',
     subsections: [
       {
@@ -459,7 +459,7 @@ export const services: Service[] = [
     title: 'Почистване на подземен гараж и общи части',
     shortDescription: 'Професионално почистване на гаражи, мазета и общи подземни помещения.',
     heroDescription: 'Професионално почистване и поддръжка на гаражи, мазета и подземни помещения с акцент върху безопасността и хигиената. Специализирано оборудване за всяка повърхност.',
-    image: '/8.webp',
+    image: '/revision/pochistvane_na_podzemen_garaj_i_obshti_chasti.jpg',
     price: '1.8 - 3.0€/кв.м.',
     subsections: [
       {
@@ -514,7 +514,7 @@ export const services: Service[] = [
     title: 'Машинно почистване на твърди подови настилки',
     shortDescription: 'Специализирано машинно почистване на теракот, ламинат и паркет.',
     heroDescription: 'Специализирано машинно почистване за възстановяване на блясъка и хигиената на твърди подове. Подходящо за всички видове настилки с гарантирани резултати.',
-    image: '/9.jpeg',
+    image: '/revision/mashinno_pochistvane_na_tvurdi_podowi_nastilki.jpg',
     price: '2.2 - 3.5€/кв.м.',
     subsections: [
       {
@@ -569,7 +569,7 @@ export const services: Service[] = [
     title: 'Доставка на хигиенни консумативи и дезинфектанти',
     shortDescription: 'Професионални препарати и консумативи за поддържане на хигиената.',
     heroDescription: 'Професионални препарати и консумативи за поддържане на високи стандарти за чистота и хигиена. Бърза доставка и гарантирано качество за вашия дом или офис.',
-    image: '/10.webp',
+    image: '/revision/dostavka_na_higienni_konsumativi_i_dezifektanti.jpg',
     price: 'По договаряне',
     subsections: [
       {
@@ -624,7 +624,7 @@ export const services: Service[] = [
     title: 'Дезинфекция на често докосвани повърхности',
     shortDescription: 'Специализирана дезинфекция за максимална защита от бактерии и вируси.',
     heroDescription: 'Специализирана дезинфекция за максимална защита срещу вируси, бактерии и патогени в домашна и офис среда. Осигуряваме безопасна и хигиенична среда, унищожавайки до 99.9% от патогените.',
-    image: '/11.webp',
+    image: '/revision/dezinfekciq_na_chesto_dokoswani_povurhnosti.jpg',
     price: '0.8-1.5€/кв.м.',
     subsections: [
       {

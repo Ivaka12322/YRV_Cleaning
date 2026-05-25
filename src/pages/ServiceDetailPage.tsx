@@ -89,44 +89,53 @@ export default function ServiceDetailPage() {
       {/* Hero */}
       <section
         className="relative pt-36 pb-20 overflow-hidden"
-        style={{ background: '#0A0A0A', minHeight: '50vh' }}
+        style={{ minHeight: '50vh' }}
       >
-        {/* Background image overlay */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            backgroundImage: `url(${service.image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.12,
-          }}
+        {/* Full-brightness background image */}
+        <img
+          src={service.image}
+          alt={service.title}
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: 'brightness(0.9)' }}
         />
+        {/* Subtle bottom gradient to anchor content */}
         <div
           className="absolute inset-0 pointer-events-none"
-          style={{ background: 'linear-gradient(to right, rgba(10,10,10,0.95) 40%, transparent 100%)' }}
+          style={{ background: 'linear-gradient(to top, rgba(10,10,10,0.5) 0%, transparent 60%)' }}
         />
 
         <div className="relative max-w-7xl mx-auto px-6">
-          <p
-            className="text-xs font-semibold uppercase tracking-widest mb-4"
-            style={{ color: '#FF6B35', letterSpacing: '0.18em' }}
+          {/* Localized text backdrop */}
+          <div
+            className="inline-block rounded-2xl px-7 py-6"
+            style={{
+              background: 'rgba(0,0,0,0.58)',
+              backdropFilter: 'blur(8px)',
+              WebkitBackdropFilter: 'blur(8px)',
+              maxWidth: '720px',
+            }}
           >
-            Специализирани услуги
-          </p>
+            <p
+              className="text-xs font-semibold uppercase tracking-widest mb-4"
+              style={{ color: '#FF6B35', letterSpacing: '0.18em' }}
+            >
+              Специализирани услуги
+            </p>
 
-          <h1
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-            style={{ letterSpacing: '-0.02em', lineHeight: '1.05', maxWidth: '700px' }}
-          >
-            {service.title}
-          </h1>
+            <h1
+              className="text-4xl md:text-6xl font-bold text-white mb-6"
+              style={{ letterSpacing: '-0.02em', lineHeight: '1.05' }}
+            >
+              {service.title}
+            </h1>
 
-          <p
-            className="text-lg text-gray-400 leading-relaxed"
-            style={{ maxWidth: '600px', lineHeight: '1.6' }}
-          >
-            {service.heroDescription}
-          </p>
+            <p
+              className="text-lg text-gray-200 leading-relaxed"
+              style={{ lineHeight: '1.6' }}
+            >
+              {service.heroDescription}
+            </p>
+          </div>
         </div>
       </section>
 

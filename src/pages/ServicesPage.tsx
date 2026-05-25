@@ -60,7 +60,7 @@ export default function ServicesPage() {
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-all duration-500 ease-in-out group-hover:scale-110 group-hover:brightness-110"
                     />
                     <div
                       className="absolute inset-0"
