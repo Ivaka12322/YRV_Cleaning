@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 import { getServiceBySlug } from '../data/services';
 import Footer from '../components/Footer';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const iconMap: Record<string, JSX.Element> = {
   shower: <Bath size={18} color="#FF6B35" />,
@@ -71,13 +71,42 @@ function getIcon(iconName: string) {
   );
 }
 
+const fadeUpStyle = (visible: boolean, delay: number): React.CSSProperties => ({
+  opacity: visible ? 1 : 0,
+  transform: visible ? 'none' : 'translateY(22px)',
+  transition: `opacity 0.6s cubic-bezier(0.22,1,0.36,1) ${delay}ms, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${delay}ms`,
+});
+
+const fadeInStyle = (visible: boolean, delay: number): React.CSSProperties => ({
+  opacity: visible ? 1 : 0,
+  transition: `opacity 0.55s ease ${delay}ms`,
+});
+
+const slideLeftStyle = (visible: boolean, delay: number): React.CSSProperties => ({
+  opacity: visible ? 1 : 0,
+  transform: visible ? 'none' : 'translateX(-20px)',
+  transition: `opacity 0.6s cubic-bezier(0.22,1,0.36,1) ${delay}ms, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${delay}ms`,
+});
+
+const slideRightStyle = (visible: boolean, delay: number): React.CSSProperties => ({
+  opacity: visible ? 1 : 0,
+  transform: visible ? 'none' : 'translateX(20px)',
+  transition: `opacity 0.6s cubic-bezier(0.22,1,0.36,1) ${delay}ms, transform 0.6s cubic-bezier(0.22,1,0.36,1) ${delay}ms`,
+});
+
 export default function ServiceDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? getServiceBySlug(slug) : undefined;
   const stickyRef = useRef<HTMLDivElement>(null);
+  const [entered, setEntered] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setEntered(false);
+    const t = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setEntered(true));
+    });
+    return () => cancelAnimationFrame(t);
   }, [slug]);
 
   if (!service) {
@@ -93,7 +122,10 @@ export default function ServiceDetailPage() {
       >
         {/* Rounded image container */}
         <div className="max-w-7xl mx-auto px-6">
-          <div className="relative rounded-3xl overflow-hidden" style={{ minHeight: '480px' }}>
+          <div
+            className="relative rounded-3xl overflow-hidden"
+            style={{ minHeight: '480px', ...fadeInStyle(entered, 0) }}
+          >
             <img
               src={service.image}
               alt={service.title}
@@ -119,21 +151,21 @@ export default function ServiceDetailPage() {
           >
             <p
               className="text-xs font-semibold uppercase tracking-widest mb-4"
-              style={{ color: '#FF6B35', letterSpacing: '0.18em' }}
+              style={{ color: '#FF6B35', letterSpacing: '0.18em', ...fadeUpStyle(entered, 80) }}
             >
               Специализирани услуги
             </p>
 
             <h1
               className="text-4xl md:text-6xl font-bold text-white mb-6"
-              style={{ letterSpacing: '-0.02em', lineHeight: '1.05' }}
+              style={{ letterSpacing: '-0.02em', lineHeight: '1.05', ...fadeUpStyle(entered, 160) }}
             >
               {service.title}
             </h1>
 
             <p
               className="text-lg text-gray-200 leading-relaxed"
-              style={{ lineHeight: '1.6' }}
+              style={{ lineHeight: '1.6', ...fadeUpStyle(entered, 240) }}
             >
               {service.heroDescription}
             </p>
@@ -158,6 +190,7 @@ export default function ServiceDetailPage() {
                     background: '#161616',
                     border: '1px solid rgba(255,255,255,0.08)',
                     borderLeft: '4px solid #FF6B35',
+                    ...slideLeftStyle(entered, 320 + i * 80),
                   }}
                 >
                   <div className="flex items-start gap-4 mb-4">
@@ -197,7 +230,7 @@ export default function ServiceDetailPage() {
             </div>
 
             {/* Right: Sticky Contact Card */}
-            <div ref={stickyRef} className="lg:sticky lg:top-28">
+            <div ref={stickyRef} className="lg:sticky lg:top-28" style={slideRightStyle(entered, 340)}>
               <div
                 className="rounded-2xl p-8"
                 style={{
