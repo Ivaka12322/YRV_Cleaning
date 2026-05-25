@@ -80,7 +80,7 @@ export default function AboutPage() {
                 <img
                   src="/revision/Za_ns_-_do_koi_sme_nie.jpg"
                   alt="YRV Екип - Професионални почистващи услуги"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
                 <div
                   className="absolute inset-0"
