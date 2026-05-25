@@ -715,6 +715,50 @@ export default function HomePage() {
         </Animate>
       </section>
 
+      {/* Bottom Contact Bar */}
+      <div className="w-full px-4 sm:px-6 py-4 flex justify-center" style={{ background: '#111111' }}>
+        <div
+          className="rounded-full px-4 sm:px-6 py-2.5"
+          style={{
+            background: 'linear-gradient(135deg, #FF6B35, #FF8C5A)',
+            boxShadow: '0 4px 20px rgba(255,107,53,0.35)',
+          }}
+        >
+          <div className="hidden sm:flex items-center justify-center gap-0 text-white text-xs font-medium flex-wrap">
+            <a href="mailto:Office@yrv-proclean.bg" className="flex items-center gap-1.5 hover:text-white/80 transition-colors px-3 py-0.5">
+              <Mail size={13} />
+              <span>Office@yrv-proclean.bg</span>
+            </a>
+            <span className="text-white/50 select-none">|</span>
+            <a href="tel:0892426296" className="flex items-center gap-1.5 hover:text-white/80 transition-colors px-3 py-0.5">
+              <Phone size={13} />
+              <span>0892 426 296</span>
+            </a>
+            <span className="text-white/50 select-none">|</span>
+            <span className="flex items-center gap-1.5 px-3 py-0.5">
+              <MapPin size={13} />
+              <span>гр.София жк. Кръстова вада, Ген. Иван Колев, 25</span>
+            </span>
+          </div>
+          <div className="sm:hidden flex flex-col items-center gap-1 text-white text-xs font-medium py-0.5">
+            <a href="mailto:Office@yrv-proclean.bg" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
+              <Mail size={12} />
+              <span>Office@yrv-proclean.bg</span>
+            </a>
+            <div className="flex items-center gap-3">
+              <a href="tel:0892426296" className="flex items-center gap-1.5 hover:text-white/80 transition-colors">
+                <Phone size={12} />
+                <span>0892 426 296</span>
+              </a>
+            </div>
+            <span className="flex items-center gap-1.5 text-center leading-tight">
+              <MapPin size={12} className="flex-shrink-0" />
+              <span>жк. Кръстова вада, Ген. Иван Колев, 25</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
       <Footer variant="simple" />
     </div>
   );

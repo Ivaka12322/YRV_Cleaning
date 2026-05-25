@@ -1,4 +1,4 @@
-import { CheckCircle2, Award, Clock, Shield, Users } from 'lucide-react';
+import { CheckCircle2, Award, Clock, Shield, Users, Phone, MessageSquare, MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Animate from '../components/Animate';
@@ -189,24 +189,52 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section
-        className="py-24 px-6"
-        style={{ background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%)' }}
+        className="py-12 md:py-20 px-6"
+        style={{ background: '#111111' }}
       >
         <Animate type="fade-up">
-          <div className="max-w-3xl mx-auto text-center">
+          <div
+            className="max-w-5xl mx-auto rounded-3xl px-6 md:px-10 py-8 md:py-16 text-center"
+            style={{ background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C5A 100%)' }}
+          >
             <h2
-              className="text-4xl md:text-5xl font-bold text-white mb-5"
+              className="text-2xl md:text-5xl font-bold text-white mb-3 md:mb-5"
               style={{ letterSpacing: '-0.02em' }}
             >
-              Готови за безупречна чистота?
+              Готови за перфектна чистота?
             </h2>
-            <p className="text-white/90 text-xl mb-10">Свържете се с нас още днес!</p>
+            <p className="text-white/90 text-base md:text-xl mb-6 md:mb-12">Свържете се с нас за безплатен оглед и оферта</p>
+
+            <div className="hidden md:grid grid-cols-3 gap-5 mb-12">
+              {[
+                { icon: <Phone size={24} />, label: 'Обадете се', info: '+359 892 426 296' },
+                { icon: <MessageSquare size={24} />, label: 'Пишете ни', info: 'Office@yrv-proclean.bg' },
+                { icon: <MapPin size={24} />, label: 'Адрес', info: 'жк. Кръстова вада, Ген. Иван Колев, 25' },
+              ].map((item) => (
+                <div
+                  key={item.label}
+                  className="p-6 rounded-2xl text-white"
+                  style={{ background: 'rgba(255,255,255,0.15)' }}
+                >
+                  <div className="flex justify-center mb-3">{item.icon}</div>
+                  <p className="text-xs uppercase tracking-widest text-white/70 mb-1">{item.label}</p>
+                  <p className="font-semibold">{item.info}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="md:hidden mb-6 space-y-2 text-sm text-white/90">
+              <p>Обадете се: <span className="font-semibold">+359 892 426 296</span></p>
+              <p>Имейл: <span className="font-semibold">Office@yrv-proclean.bg</span></p>
+            </div>
+
             <Link
               to="/contact"
-              className="inline-flex items-center gap-3 px-10 py-5 rounded-full font-bold text-orange-500 bg-white transition-all duration-200 hover:scale-105 uppercase tracking-wider text-sm"
+              className="inline-flex items-center gap-3 px-6 md:px-10 py-3 md:py-5 rounded-full font-bold text-orange-500 bg-white transition-all duration-200 hover:scale-105 uppercase tracking-wider text-xs md:text-sm"
               style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.2)' }}
             >
-              Свържете се с нас
+              Заявете час
+              <ArrowRight size={16} />
             </Link>
           </div>
         </Animate>
