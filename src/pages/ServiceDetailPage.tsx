@@ -132,7 +132,7 @@ export default function ServiceDetailPage() {
             </h1>
 
             <p
-              className="text-lg text-gray-200 leading-relaxed"
+              className="text-lg text-gray-200 leading-relaxed line-clamp-3 md:line-clamp-none"
               style={{ lineHeight: '1.6' }}
             >
               {service.heroDescription}
