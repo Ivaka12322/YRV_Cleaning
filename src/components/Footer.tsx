@@ -108,8 +108,8 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
           style={{ borderColor: 'rgba(255,255,255,0.06)' }}
         >
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-            <p className="text-xs text-gray-600">© 2026 YRV Premium Cleaning. All rights reserved.</p>
-            <p className="text-xs text-gray-600">
+            <p className="text-xs text-gray-600 text-center md:text-left">© 2026 YRV Premium Cleaning. All rights reserved.</p>
+            <p className="text-xs text-gray-600 text-center md:text-right">
               Сайтът е изготвен от{' '}
               <a
                 href="https://avltechsolutions.org"
@@ -137,12 +137,12 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
     >
       <div className="max-w-7xl mx-auto px-6 py-10">
         {/* Top row: brand + nav */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
-          <div>
+        <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-6 mb-8">
+          <div className="text-center md:text-left">
             <div className="text-xl font-bold text-white mb-1">YRV</div>
             <p className="text-xs text-gray-600">Премиум почистващи услуги в София</p>
           </div>
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap gap-6 justify-center md:justify-end">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -160,13 +160,13 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
           className="pt-6 pb-6"
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
-          <p className="text-xs font-semibold text-white uppercase tracking-widest mb-4">Услуги</p>
+          <p className="text-xs font-semibold text-white uppercase tracking-widest mb-4 text-center md:text-left">Услуги</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-2">
             {services.map((service) => (
               <Link
                 key={service.id}
                 to={`/services/${service.slug}`}
-                className="text-xs text-gray-500 hover:text-orange-500 transition-colors leading-relaxed truncate"
+                className="text-xs text-gray-500 hover:text-orange-500 transition-colors leading-relaxed truncate text-center sm:text-left"
                 title={service.title}
               >
                 {service.title}
@@ -180,8 +180,8 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
           className="pt-5 flex flex-col sm:flex-row items-center justify-between gap-2"
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
-          <p className="text-xs text-gray-600">© 2026 YRV Premium Cleaning. All rights reserved.</p>
-          <p className="text-xs text-gray-600">
+          <p className="text-xs text-gray-600 text-center sm:text-left">© 2026 YRV Premium Cleaning. All rights reserved.</p>
+          <p className="text-xs text-gray-600 text-center sm:text-right">
             Сайтът е изготвен от{' '}
             <a
               href="https://avltechsolutions.org"
