@@ -202,10 +202,10 @@ export default function AboutPage() {
       {/* Our Team */}
       <section className="py-20 px-6" style={{ background: '#0A0A0A' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-5 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-5 items-stretch lg:h-[440px]">
 
             {/* Left: Stats */}
-            <Animate type="slide-left">
+            <Animate type="slide-left" className="h-full">
               <div className="flex flex-col gap-5 h-full">
                 {[
                   { label: 'ДОВОЛНИ КЛИЕНТИ:', value: '500+' },
@@ -232,7 +232,7 @@ export default function AboutPage() {
             </Animate>
 
             {/* Center: Team description */}
-            <Animate type="fade-up" delay={80}>
+            <Animate type="fade-up" delay={80} className="h-full">
               <div
                 className="flex flex-col items-center justify-center text-center p-10 rounded-2xl h-full"
                 style={{
@@ -262,7 +262,7 @@ export default function AboutPage() {
             </Animate>
 
             {/* Right: Reviews */}
-            <Animate type="slide-right" delay={160}>
+            <Animate type="slide-right" delay={160} className="h-full">
               {/* Desktop: fixed height with up/down arrow buttons, no scrollbar */}
               <div className="hidden lg:flex flex-col gap-2 h-full" style={{ minHeight: 0 }}>
                 <button
