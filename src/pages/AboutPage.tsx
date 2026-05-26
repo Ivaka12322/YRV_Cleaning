@@ -1,55 +1,9 @@
-import { CheckCircle2, Award, Clock, Shield, Users, Phone, MessageSquare, MapPin, ArrowRight, ChevronUp, ChevronDown } from 'lucide-react';
+import { CheckCircle2, Award, Clock, Shield, Users, Phone, MessageSquare, MapPin, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Animate from '../components/Animate';
-import { useRef, useState, useCallback } from 'react';
-
-const REVIEWS = [
-  { name: 'Мария С.', text: 'Изключително професионални и точни! Домът ми блести.' },
-  { name: 'Димитър К.', text: 'Страхотно качество на работа. Най-сетне намерих истински почистващи специалисти.' },
-  { name: 'Елена В.', text: 'Бърза и ефективна услуга. Препоръчвам.' },
-  { name: 'Георги Н.', text: 'Перфектно почистване след ремонт. Екипът е много внимателен и отговорен.' },
-  { name: 'Ивана Т.', text: 'Използвам услугите им вече 6 месеца. Всеки път резултатът е безупречен.' },
-  { name: 'Христо М.', text: 'Офисът ни изглежда като нов след всяко посещение. Отлично обслужване!' },
-  { name: 'Петя Д.', text: 'Много деликатни с личните вещи и изключително чисти в работата си.' },
-  { name: 'Стефан Р.', text: 'Препоръчах ги на целия ни вход. Всички са доволни от резултата.' },
-];
-
-function ReviewCard({ name, text }: { name: string; text: string }) {
-  return (
-    <div
-      className="p-4 rounded-xl flex-shrink-0"
-      style={{ background: '#1e1e1e', border: '1px solid rgba(255,255,255,0.08)' }}
-    >
-      <p className="text-sm font-semibold text-white mb-1">{name}</p>
-      <div className="flex gap-0.5 mb-2">
-        {[...Array(5)].map((_, s) => (
-          <span key={s} style={{ color: '#FF6B35', fontSize: '12px' }}>★</span>
-        ))}
-      </div>
-      <p className="text-xs text-gray-400 leading-relaxed">{text}</p>
-    </div>
-  );
-}
 
 export default function AboutPage() {
-  const desktopScrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollUp, setCanScrollUp] = useState(false);
-  const [canScrollDown, setCanScrollDown] = useState(true);
-
-  const handleScroll = useCallback(() => {
-    const el = desktopScrollRef.current;
-    if (!el) return;
-    setCanScrollUp(el.scrollTop > 4);
-    setCanScrollDown(el.scrollTop + el.clientHeight < el.scrollHeight - 4);
-  }, []);
-
-  const scrollBy = (dir: 'up' | 'down') => {
-    const el = desktopScrollRef.current;
-    if (!el) return;
-    el.scrollBy({ top: dir === 'down' ? 120 : -120, behavior: 'smooth' });
-  };
-
   return (
     <div style={{ background: '#0A0A0A' }}>
       {/* Hero */}
@@ -202,10 +156,10 @@ export default function AboutPage() {
       {/* Our Team */}
       <section className="py-20 px-6" style={{ background: '#0A0A0A' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-5 items-stretch lg:h-[440px]">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-5 items-stretch">
 
             {/* Left: Stats */}
-            <Animate type="slide-left" className="h-full">
+            <Animate type="slide-left">
               <div className="flex flex-col gap-5 h-full">
                 {[
                   { label: 'ДОВОЛНИ КЛИЕНТИ:', value: '500+' },
@@ -214,7 +168,7 @@ export default function AboutPage() {
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="flex-1 flex flex-col items-center justify-center text-center p-6 rounded-2xl"
+                    className="flex-1 flex flex-col justify-center p-6 rounded-2xl"
                     style={{
                       background: '#161616',
                       border: '1px solid rgba(255,255,255,0.08)',
@@ -232,7 +186,7 @@ export default function AboutPage() {
             </Animate>
 
             {/* Center: Team description */}
-            <Animate type="fade-up" delay={80} className="h-full">
+            <Animate type="fade-up" delay={80}>
               <div
                 className="flex flex-col items-center justify-center text-center p-10 rounded-2xl h-full"
                 style={{
@@ -262,81 +216,35 @@ export default function AboutPage() {
             </Animate>
 
             {/* Right: Reviews */}
-            <Animate type="slide-right" delay={160} className="h-full">
-              {/* Desktop: fixed height with up/down arrow buttons, no scrollbar */}
-              <div className="hidden lg:flex flex-col gap-2 h-full" style={{ minHeight: 0 }}>
-                <button
-                  onClick={() => scrollBy('up')}
-                  disabled={!canScrollUp}
-                  className="flex items-center justify-center w-full py-1.5 rounded-xl transition-all duration-200 flex-shrink-0"
-                  style={{
-                    background: canScrollUp ? 'rgba(255,107,53,0.15)' : 'rgba(255,255,255,0.04)',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    cursor: canScrollUp ? 'pointer' : 'default',
-                  }}
-                >
-                  <ChevronUp size={18} color={canScrollUp ? '#FF6B35' : 'rgba(255,255,255,0.2)'} />
-                </button>
-
-                <div
-                  ref={desktopScrollRef}
-                  onScroll={handleScroll}
-                  className="flex flex-col gap-3 overflow-y-auto flex-1"
-                  style={{
-                    scrollbarWidth: 'none',
-                    msOverflowStyle: 'none',
-                  }}
-                >
-                  {REVIEWS.map((review, i) => (
-                    <ReviewCard key={i} name={review.name} text={review.text} />
-                  ))}
-                </div>
-
-                <button
-                  onClick={() => scrollBy('down')}
-                  disabled={!canScrollDown}
-                  className="flex items-center justify-center w-full py-1.5 rounded-xl transition-all duration-200 flex-shrink-0"
-                  style={{
-                    background: canScrollDown ? 'rgba(255,107,53,0.15)' : 'rgba(255,255,255,0.04)',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    cursor: canScrollDown ? 'pointer' : 'default',
-                  }}
-                >
-                  <ChevronDown size={18} color={canScrollDown ? '#FF6B35' : 'rgba(255,255,255,0.2)'} />
-                </button>
-              </div>
-
-              {/* Mobile: horizontal scroll with peek */}
-              <div className="lg:hidden relative">
-                <div
-                  className="flex gap-3 overflow-x-auto pb-2"
-                  style={{
-                    scrollbarWidth: 'none',
-                    msOverflowStyle: 'none',
-                    scrollSnapType: 'x mandatory',
-                  }}
-                >
-                  {REVIEWS.map((review, i) => (
-                    <div
-                      key={i}
-                      className="flex-shrink-0"
-                      style={{
-                        width: 'calc(85vw - 24px)',
-                        maxWidth: '300px',
-                        scrollSnapAlign: 'start',
-                      }}
-                    >
-                      <ReviewCard name={review.name} text={review.text} />
+            <Animate type="slide-right" delay={160}>
+              <div className="flex flex-col gap-3 h-full overflow-y-auto" style={{ maxHeight: '520px' }}>
+                {[
+                  { name: 'Мария С.', text: 'Изключително професионални и точни! Домът ми блести.' },
+                  { name: 'Димитър К.', text: 'Страхотно качество на работа. Най-сетне намерих истински почистващи специалисти.' },
+                  { name: 'Елена В.', text: 'Бърза и ефективна услуга. Препоръчвам.' },
+                  { name: 'Георги Н.', text: 'Перфектно почистване след ремонт. Екипът е много внимателен и отговорен.' },
+                  { name: 'Ивана Т.', text: 'Използвам услугите им вече 6 месеца. Всеки път резултатът е безупречен.' },
+                  { name: 'Христо М.', text: 'Офисът ни изглежда като нов след всяко посещение. Отлично обслужване!' },
+                  { name: 'Петя Д.', text: 'Много деликатни с личните вещи и изключително чисти в работата си.' },
+                  { name: 'Стефан Р.', text: 'Препоръчах ги на целия ни вход. Всички са доволни от резултата.' },
+                ].map((review, i) => (
+                  <div
+                    key={i}
+                    className="p-4 rounded-xl flex-shrink-0"
+                    style={{
+                      background: '#161616',
+                      border: '1px solid rgba(255,255,255,0.08)',
+                    }}
+                  >
+                    <p className="text-sm font-semibold text-white mb-1">{review.name}</p>
+                    <div className="flex gap-0.5 mb-2">
+                      {[...Array(5)].map((_, s) => (
+                        <span key={s} style={{ color: '#FF6B35', fontSize: '12px' }}>★</span>
+                      ))}
                     </div>
-                  ))}
-                  {/* Spacer to ensure last card peeks */}
-                  <div className="flex-shrink-0 w-4" />
-                </div>
-                {/* Fade-out on the right to indicate more cards */}
-                <div
-                  className="absolute top-0 right-0 bottom-2 w-16 pointer-events-none"
-                  style={{ background: 'linear-gradient(to right, transparent, #0A0A0A)' }}
-                />
+                    <p className="text-xs text-gray-400 leading-relaxed">{review.text}</p>
+                  </div>
+                ))}
               </div>
             </Animate>
 
