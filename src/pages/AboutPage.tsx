@@ -155,35 +155,100 @@ export default function AboutPage() {
 
       {/* Our Team */}
       <section className="py-20 px-6" style={{ background: '#0A0A0A' }}>
-        <div className="max-w-5xl mx-auto">
-          <Animate type="fade-up">
-            <div
-              className="text-center p-12 rounded-2xl"
-              style={{
-                background: '#1A1A1A',
-                border: '1px solid rgba(255,255,255,0.08)',
-              }}
-            >
-              <div
-                className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6"
-                style={{ background: 'rgba(255,107,53,0.15)' }}
-              >
-                <Users size={32} color="#FF6B35" />
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-[220px_1fr_300px] gap-5 items-stretch">
+
+            {/* Left: Stats */}
+            <Animate type="slide-left">
+              <div className="flex flex-col gap-5 h-full">
+                {[
+                  { label: 'ДОВОЛНИ КЛИЕНТИ:', value: '500+' },
+                  { label: 'БЪРЗА РЕАКЦИЯ:', value: '24/7' },
+                  { label: 'КАЧЕСТВО:', value: '100%' },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="flex-1 flex flex-col justify-center p-6 rounded-2xl"
+                    style={{
+                      background: '#161616',
+                      border: '1px solid rgba(255,255,255,0.08)',
+                    }}
+                  >
+                    <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2" style={{ letterSpacing: '0.12em' }}>
+                      {stat.label}
+                    </p>
+                    <p className="text-4xl font-bold" style={{ color: '#FF6B35', letterSpacing: '-0.02em' }}>
+                      {stat.value}
+                    </p>
+                  </div>
+                ))}
               </div>
-              <h2
-                className="text-4xl font-bold text-white mb-6"
-                style={{ letterSpacing: '-0.02em' }}
+            </Animate>
+
+            {/* Center: Team description */}
+            <Animate type="fade-up" delay={80}>
+              <div
+                className="flex flex-col items-center justify-center text-center p-10 rounded-2xl h-full"
+                style={{
+                  background: '#161616',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                }}
               >
-                Нашият екип
-              </h2>
-              <p className="text-gray-400 leading-relaxed text-base max-w-2xl mx-auto mb-4">
-                В сърцето на YRV стоят нашите хора. Ние сме внимателно подбран екип от професионалисти, обединени от страстта към съвършенството. Всяко лице зад нашата марка преминава през интензивни програми за обучение, гарантиращи не само техническа компетентност, но и високо ниво на клиентско обслужване.
-              </p>
-              <p className="text-gray-400 leading-relaxed text-base max-w-2xl mx-auto">
-                Гордеем се с нашата култура на уважение, интегритет и непрекъснато усъвършенстване.
-              </p>
-            </div>
-          </Animate>
+                <div
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
+                  style={{ background: 'rgba(255,107,53,0.15)' }}
+                >
+                  <Users size={32} color="#FF6B35" />
+                </div>
+                <h2
+                  className="text-3xl font-bold text-white mb-5"
+                  style={{ letterSpacing: '-0.02em' }}
+                >
+                  Нашият екип
+                </h2>
+                <p className="text-gray-400 leading-relaxed text-sm mb-4">
+                  В сърцето на YRV стоят нашите хора. Ние сме внимателно подбран екип от професионалисти, обединени от страстта към съвършенството. Всяко лице зад нашата марка преминава през интензивни програми за обучение, гарантиращи не само техническа компетентност, но и високо ниво на клиентско обслужване.
+                </p>
+                <p className="text-gray-400 leading-relaxed text-sm">
+                  Гордеем се с нашата култура на уважение, интегритет и непрекъснато усъвършенстване.
+                </p>
+              </div>
+            </Animate>
+
+            {/* Right: Reviews */}
+            <Animate type="slide-right" delay={160}>
+              <div className="flex flex-col gap-3 h-full overflow-y-auto" style={{ maxHeight: '520px' }}>
+                {[
+                  { name: 'Мария С.', text: 'Изключително професионални и точни! Домът ми блести.' },
+                  { name: 'Димитър К.', text: 'Страхотно качество на работа. Най-сетне намерих истински почистващи специалисти.' },
+                  { name: 'Елена В.', text: 'Бърза и ефективна услуга. Препоръчвам.' },
+                  { name: 'Георги Н.', text: 'Перфектно почистване след ремонт. Екипът е много внимателен и отговорен.' },
+                  { name: 'Ивана Т.', text: 'Използвам услугите им вече 6 месеца. Всеки път резултатът е безупречен.' },
+                  { name: 'Христо М.', text: 'Офисът ни изглежда като нов след всяко посещение. Отлично обслужване!' },
+                  { name: 'Петя Д.', text: 'Много деликатни с личните вещи и изключително чисти в работата си.' },
+                  { name: 'Стефан Р.', text: 'Препоръчах ги на целия ни вход. Всички са доволни от резултата.' },
+                ].map((review, i) => (
+                  <div
+                    key={i}
+                    className="p-4 rounded-xl flex-shrink-0"
+                    style={{
+                      background: '#161616',
+                      border: '1px solid rgba(255,255,255,0.08)',
+                    }}
+                  >
+                    <p className="text-sm font-semibold text-white mb-1">{review.name}</p>
+                    <div className="flex gap-0.5 mb-2">
+                      {[...Array(5)].map((_, s) => (
+                        <span key={s} style={{ color: '#FF6B35', fontSize: '12px' }}>★</span>
+                      ))}
+                    </div>
+                    <p className="text-xs text-gray-400 leading-relaxed">{review.text}</p>
+                  </div>
+                ))}
+              </div>
+            </Animate>
+
+          </div>
         </div>
       </section>
 
