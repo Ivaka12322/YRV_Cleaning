@@ -128,7 +128,7 @@ export default function HomePage() {
             {/* Left: Character Image — z-5 places the figure behind the benefits box (z-20) */}
             <div className="relative order-2 lg:order-1 flex justify-center items-start lg:mt-0" style={{ zIndex: 5 }}>
               {/* Left-side floating badges — stacked vertically */}
-              <div className="absolute left-0 top-8 flex flex-col gap-3 z-10" style={{ transform: 'translateX(-50%)' }}>
+              <div className="absolute left-0 top-8 flex flex-col gap-10 z-10" style={{ transform: 'translateX(-50%)' }}>
                 {/* Badge 1: Доверени Професионалисти — always at top */}
                 <div
                   className="flex items-center gap-3 px-4 py-3 rounded-xl"
