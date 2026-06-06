@@ -173,7 +173,7 @@ export default function HomePage() {
 
                 {/* Badge 3: Години опит */}
                 <div
-                  className="flex items-center gap-5 px-4 py-3 rounded-xl"
+                  className="flex items-center gap-20 px-4 py-3 rounded-xl"
                   style={{
                     background: '#1A1A1A',
                     border: '1px solid rgba(255,255,255,0.12)',
