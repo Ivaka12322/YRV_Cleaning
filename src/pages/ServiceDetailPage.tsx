@@ -255,7 +255,7 @@ export default function ServiceDetailPage() {
 
                 {/* Price Display */}
                 <div className="mb-5 p-3 rounded-lg" style={{ background: 'rgba(255,255,255,0.12)' }}>
-                  <p className="text-xs text-white/70 mb-1">Начална цена:</p>
+                  <p className="text-xs text-white/70 mb-1">Цена:</p>
                   <p className="text-lg font-bold text-white" style={{ letterSpacing: '-0.01em' }}>
                     {service.price}
                   </p>
@@ -267,31 +267,49 @@ export default function ServiceDetailPage() {
 
                 {/* Contact Info */}
                 <div className="space-y-4 mb-7">
-                  <a
-                    href="tel:+359 892 426 296"
-                    className="flex items-center gap-3 text-white hover:text-white/80 transition-colors"
-                  >
-                    <div
-                      className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                      style={{ background: 'rgba(255,255,255,0.2)' }}
+                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                    <a
+                      href="tel:+359892426296"
+                      className="flex items-center gap-3 text-white hover:text-white/80 transition-colors"
                     >
-                      <Phone size={16} color="white" />
-                    </div>
-                    <span className="text-lg font-semibold">+359 892 426 296</span>
-                  </a>
+                      <div
+                        className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+                        style={{ background: 'rgba(255,255,255,0.2)' }}
+                      >
+                        <Phone size={16} color="white" />
+                      </div>
+                      <span className="text-base font-semibold">+359 892 426 296</span>
+                    </a>
+                    <a
+                      href="tel:+359892426296"
+                      className="px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-200 hover:bg-white/10 flex-shrink-0"
+                      style={{ border: '1px solid rgba(255,255,255,0.5)', color: 'white' }}
+                    >
+                      Обадете се
+                    </a>
+                  </div>
 
-                  <a
-                    href="mailto:Office@yrv-proclean.bg"
-                    className="flex items-center gap-3 text-white hover:text-white/80 transition-colors"
-                  >
-                    <div
-                      className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
-                      style={{ background: 'rgba(255,255,255,0.2)' }}
+                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                    <a
+                      href="mailto:Office@yrv-proclean.bg"
+                      className="flex items-center gap-3 text-white hover:text-white/80 transition-colors"
                     >
-                      <Mail size={16} color="white" />
-                    </div>
-                    <span className="text-base">Office@yrv-proclean.bg</span>
-                  </a>
+                      <div
+                        className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+                        style={{ background: 'rgba(255,255,255,0.2)' }}
+                      >
+                        <Mail size={16} color="white" />
+                      </div>
+                      <span className="text-sm">Office@yrv-proclean.bg</span>
+                    </a>
+                    <a
+                      href="mailto:Office@yrv-proclean.bg"
+                      className="px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-200 hover:bg-white/10 flex-shrink-0"
+                      style={{ border: '1px solid rgba(255,255,255,0.5)', color: 'white' }}
+                    >
+                      Пишете ни
+                    </a>
+                  </div>
                 </div>
 
                 {/* Divider */}

@@ -24,7 +24,7 @@ export const services: Service[] = [
     shortDescription: 'Цялостно почистване на всички помещения с професионално оборудване и препарати.',
     heroDescription: 'Комплексно почистване на всяко помещение с висококачествени препарати и модерно оборудване за перфектни резултати.',
     image: '/revision/osnovno_pochistvane_na_ofisi_i_domove.jpg',
-    price: '2.50€/кв.м.',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'shower',
@@ -78,7 +78,7 @@ export const services: Service[] = [
     shortDescription: 'Дълбочинно почистване на мека мебел, килими, матраци и спални покрития.',
     heroDescription: 'Дълбочинно почистване с професионални машини за ефективно отстраняване на петна, миризми и алергени от мебели и текстилни покрития.',
     image: '/revision/Mashinno_izpirane.jpg',
-    price: 'По договаряне',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'sofa',
@@ -132,7 +132,7 @@ export const services: Service[] = [
     shortDescription: 'Професионално почистване след ремонт и строителство с премахване на всички строителни отпадъци.',
     heroDescription: 'Професионално почистване след строителство с пълно премахване на отпадъци и прах за готовност за незабавно обитаване.',
     image: '/revision/pochistvane_na_stroitelni_obekti.jpg',
-    price: 'По договаряне',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'trash-2',
@@ -187,7 +187,7 @@ export const services: Service[] = [
     shortDescription: 'Редовно поддържане на чистотата с гъвкави графици и преференциални цени.',
     heroDescription: 'Редовно поддържане на чистотата с професионални стандарти за офиси и домове, изискващи постоянна безупречна хигиена.',
     image: '/revision/abonamentno_pochistvane_na_ofisi_i_domove.jpg',
-    price: '3.0€/кв.м.',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'bath',
@@ -260,7 +260,7 @@ export const services: Service[] = [
     shortDescription: 'Двустранно почистване на прозорци и дограма за кристална чистота.',
     heroDescription: 'Професионално двустранно почистване с антиалергенни препарати за кристално чисти прозорци без петна и следи.',
     image: '/revision/pochistvane_i_polirane_na_prozorci.jpg',
-    price: '2.50€/кв.м.',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'frame',
@@ -301,7 +301,7 @@ export const services: Service[] = [
     shortDescription: 'Премахване на строителни остатъци и пълно обновяване след ремонтни дейности.',
     heroDescription: 'Специализирано почистване с пълно отстраняване на строителен прах, боя и остатъци за превръщане на обекта в готов за обитаване.',
     image: '/revision/pochistvane_sled_remont.jpg',
-    price: '3.0€/кв.м.',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'droplets',
@@ -353,7 +353,7 @@ export const services: Service[] = [
     shortDescription: 'Поддържане на стълбища, площадки и общи части в перфектно състояние.',
     heroDescription: 'Редовно професионално поддържане на входове и общи части за чиста, хигиенична среда за всички жители.',
     image: '/revision/pochistvane_na_vhodove.jpg',
-    price: '4.30€ на апартамент на месец',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'stairs',
@@ -405,7 +405,7 @@ export const services: Service[] = [
     shortDescription: 'Специализирано почистване и възстановяване след бедствия и аварии.',
     heroDescription: 'Бързо и професионално възстановяване на помещения след наводнение, пожар или аварийни ситуации до безопасно, нормално състояние.',
     image: '/revision/pochistvane_sled_navodnenie,_pojar,_dr.jpg',
-    price: 'По договаряне',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'clipboard-list',
@@ -460,7 +460,7 @@ export const services: Service[] = [
     shortDescription: 'Професионално почистване на гаражи, мазета и общи подземни помещения.',
     heroDescription: 'Професионално почистване на гаражи, мазета и подземни помещения със специализирано оборудване за всяка повърхност.',
     image: '/revision/pochistvane_na_podzemen_garaj_i_obshti_chasti.jpg',
-    price: '1.8 - 3.0€/кв.м.',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'car',
@@ -515,7 +515,7 @@ export const services: Service[] = [
     shortDescription: 'Специализирано машинно почистване на теракот, ламинат и паркет.',
     heroDescription: 'Специализирано машинно почистване за възстановяване на блясъка на твърди подове, подходящо за всички видове настилки.',
     image: '/revision/mashinno_pochistvane_na_tvurdi_podowi_nastilki.jpg',
-    price: '2.2 - 3.5€/кв.м.',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'square',
@@ -570,7 +570,7 @@ export const services: Service[] = [
     shortDescription: 'Професионални препарати и консумативи за поддържане на хигиената.',
     heroDescription: 'Бърза доставка на висококачествени препарати и консумативи за поддържане на хигиена в дома или офиса.',
     image: '/revision/dostavka_na_higienni_konsumativi_i_dezifektanti.jpg',
-    price: 'По договаряне',
+    price: 'По запитване',
     subsections: [
       {
         icon: 'flask-conical',

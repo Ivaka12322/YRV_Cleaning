@@ -127,6 +127,73 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start h-full">
             {/* Left: Character Image — z-5 places the figure behind the benefits box (z-20) */}
             <div className="relative order-2 lg:order-1 flex justify-center items-start lg:mt-0" style={{ zIndex: 5 }}>
+              {/* Left-side floating badges — stacked vertically */}
+              <div className="absolute left-0 top-8 flex flex-col gap-3 z-10" style={{ transform: 'translateX(-50%)' }}>
+                {/* Badge 1: Доверени Професионалисти — always at top */}
+                <div
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl"
+                  style={{
+                    background: '#1A1A1A',
+                    border: '1px solid rgba(255,255,255,0.12)',
+                    boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                  }}
+                >
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{ background: 'rgba(255,107,53,0.2)' }}
+                  >
+                    <ShieldCheck size={16} color="#FF6B35" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-white leading-none">Доверени</p>
+                    <p className="text-xs text-gray-500 leading-none mt-0.5">Професионалисти</p>
+                  </div>
+                </div>
+
+                {/* Badge 2: Бърз Отговор */}
+                <div
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl"
+                  style={{
+                    background: '#1A1A1A',
+                    border: '1px solid rgba(255,255,255,0.12)',
+                    boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                  }}
+                >
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{ background: 'rgba(255,107,53,0.2)' }}
+                  >
+                    <Calendar size={16} color="#FF6B35" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-white leading-none">Бърз</p>
+                    <p className="text-xs text-gray-500 leading-none mt-0.5">Отговор</p>
+                  </div>
+                </div>
+
+                {/* Badge 3: Години опит */}
+                <div
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl"
+                  style={{
+                    background: '#1A1A1A',
+                    border: '1px solid rgba(255,255,255,0.12)',
+                    boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                    zIndex: 6,
+                  }}
+                >
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                    style={{ background: 'rgba(255,107,53,0.2)' }}
+                  >
+                    <Sparkles size={16} color="#FF6B35" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-white leading-none">10+</p>
+                    <p className="text-xs text-gray-500 leading-none mt-0.5">Години опит</p>
+                  </div>
+                </div>
+              </div>
+
               <div className="relative" style={{ filter: 'drop-shadow(0 32px 80px rgba(0,0,0,0.6))' }}>
                 <img
                   src="/revision/new_character_no_bg.png"
@@ -134,70 +201,6 @@ export default function HomePage() {
                   className="object-contain"
                   style={{ maxHeight: '600px', width: 'auto' }}
                 />
-              </div>
-
-              {/* Floating Badge: Online Booking */}
-              <div
-                className="absolute top-12 -left-6 flex items-center gap-3 px-4 py-3 rounded-xl"
-                style={{
-                  background: '#1A1A1A',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-                }}
-              >
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(255,107,53,0.2)' }}
-                >
-                  <Calendar size={16} color="#FF6B35" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-white leading-none">Бърз</p>
-                  <p className="text-xs text-gray-500 leading-none mt-0.5">Отговор</p>
-                </div>
-              </div>
-
-              {/* Floating Badge: Trusted */}
-              <div
-                className="absolute top-1/3 -right-6 flex items-center gap-3 px-4 py-3 rounded-xl"
-                style={{
-                  background: '#1A1A1A',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-                }}
-              >
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(255,107,53,0.2)' }}
-                >
-                  <ShieldCheck size={16} color="#FF6B35" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-white leading-none">Доверени</p>
-                  <p className="text-xs text-gray-500 leading-none mt-0.5">Професионалисти</p>
-                </div>
-              </div>
-
-              {/* Floating Badge: Premium Quality - bottom left */}
-              <div
-                className="absolute bottom-36 -left-6 flex items-center gap-3 px-4 py-3 rounded-xl"
-                style={{
-                  background: '#1A1A1A',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-                  zIndex: 6,
-                }}
-              >
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(255,107,53,0.2)' }}
-                >
-                  <Sparkles size={16} color="#FF6B35" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-white leading-none">10+</p>
-                  <p className="text-xs text-gray-500 leading-none mt-0.5">Години опит</p>
-                </div>
               </div>
             </div>
 
@@ -681,9 +684,9 @@ export default function HomePage() {
           {/* Desktop: 3 columns, Mobile: hidden for compact view */}
           <div className="hidden md:grid grid-cols-3 gap-5 mb-12">
             {[
-              { icon: <Phone size={24} />, label: 'Обадете се', info: '+359 892 426 296' },
-              { icon: <MessageSquare size={24} />, label: 'Пишете ни', info: 'Office@yrv-proclean.bg' },
-              { icon: <MapPin size={24} />, label: 'Адрес', info: 'жк. Кръстова вада, Ген. Иван Колев, 25' },
+              { icon: <Phone size={24} />, label: 'Обадете се', info: '+359 892 426 296', href: 'tel:+359892426296' },
+              { icon: <MessageSquare size={24} />, label: 'Пишете ни', info: 'Office@yrv-proclean.bg', href: 'mailto:Office@yrv-proclean.bg' },
+              { icon: <MapPin size={24} />, label: 'Адрес', info: 'жк. Кръстова вада, Ген. Иван Колев, 25', href: null },
             ].map((item) => (
               <div
                 key={item.label}
@@ -692,15 +695,42 @@ export default function HomePage() {
               >
                 <div className="flex justify-center mb-3">{item.icon}</div>
                 <p className="text-xs uppercase tracking-widest text-white/70 mb-1">{item.label}</p>
-                <p className="font-semibold">{item.info}</p>
+                <p className="font-semibold mb-3">{item.info}</p>
+                {item.href && (
+                  <a
+                    href={item.href}
+                    className="inline-flex items-center justify-center w-full py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-200 hover:bg-white/10"
+                    style={{ border: '1px solid rgba(255,255,255,0.5)', color: 'white' }}
+                  >
+                    {item.label}
+                  </a>
+                )}
               </div>
             ))}
           </div>
 
-          {/* Mobile: compact contact info */}
-          <div className="md:hidden mb-6 space-y-2 text-sm text-white/90">
-            <p>Обадете се: <span className="font-semibold">+359 892 426 296</span></p>
-            <p>Имейл: <span className="font-semibold">Office@yrv-proclean.bg</span></p>
+          {/* Mobile: compact contact info with action buttons */}
+          <div className="md:hidden mb-6 space-y-3 text-sm text-white/90">
+            <div className="flex items-center justify-between gap-3 flex-wrap">
+              <p>Обадете се: <span className="font-semibold">+359 892 426 296</span></p>
+              <a
+                href="tel:+359892426296"
+                className="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-200"
+                style={{ border: '1px solid rgba(255,255,255,0.5)', color: 'white' }}
+              >
+                Обадете се
+              </a>
+            </div>
+            <div className="flex items-center justify-between gap-3 flex-wrap">
+              <p>Имейл: <span className="font-semibold">Office@yrv-proclean.bg</span></p>
+              <a
+                href="mailto:Office@yrv-proclean.bg"
+                className="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-200"
+                style={{ border: '1px solid rgba(255,255,255,0.5)', color: 'white' }}
+              >
+                Пишете ни
+              </a>
+            </div>
           </div>
 
           <Link

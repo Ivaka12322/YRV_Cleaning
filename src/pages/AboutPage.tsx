@@ -272,9 +272,9 @@ export default function AboutPage() {
 
             <div className="hidden md:grid grid-cols-3 gap-5 mb-12">
               {[
-                { icon: <Phone size={24} />, label: 'Обадете се', info: '+359 892 426 296' },
-                { icon: <MessageSquare size={24} />, label: 'Пишете ни', info: 'Office@yrv-proclean.bg' },
-                { icon: <MapPin size={24} />, label: 'Адрес', info: 'жк. Кръстова вада, Ген. Иван Колев, 25' },
+                { icon: <Phone size={24} />, label: 'Обадете се', info: '+359 892 426 296', href: 'tel:+359892426296' },
+                { icon: <MessageSquare size={24} />, label: 'Пишете ни', info: 'Office@yrv-proclean.bg', href: 'mailto:Office@yrv-proclean.bg' },
+                { icon: <MapPin size={24} />, label: 'Адрес', info: 'жк. Кръстова вада, Ген. Иван Колев, 25', href: null },
               ].map((item) => (
                 <div
                   key={item.label}
@@ -283,14 +283,41 @@ export default function AboutPage() {
                 >
                   <div className="flex justify-center mb-3">{item.icon}</div>
                   <p className="text-xs uppercase tracking-widest text-white/70 mb-1">{item.label}</p>
-                  <p className="font-semibold">{item.info}</p>
+                  <p className="font-semibold mb-3">{item.info}</p>
+                  {item.href && (
+                    <a
+                      href={item.href}
+                      className="inline-flex items-center justify-center w-full py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-200 hover:bg-white/10"
+                      style={{ border: '1px solid rgba(255,255,255,0.5)', color: 'white' }}
+                    >
+                      {item.label}
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
 
-            <div className="md:hidden mb-6 space-y-2 text-sm text-white/90">
-              <p>Обадете се: <span className="font-semibold">+359 892 426 296</span></p>
-              <p>Имейл: <span className="font-semibold">Office@yrv-proclean.bg</span></p>
+            <div className="md:hidden mb-6 space-y-3 text-sm text-white/90">
+              <div className="flex items-center justify-between gap-3 flex-wrap">
+                <p>Обадете се: <span className="font-semibold">+359 892 426 296</span></p>
+                <a
+                  href="tel:+359892426296"
+                  className="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-200"
+                  style={{ border: '1px solid rgba(255,255,255,0.5)', color: 'white' }}
+                >
+                  Обадете се
+                </a>
+              </div>
+              <div className="flex items-center justify-between gap-3 flex-wrap">
+                <p>Имейл: <span className="font-semibold">Office@yrv-proclean.bg</span></p>
+                <a
+                  href="mailto:Office@yrv-proclean.bg"
+                  className="px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all duration-200"
+                  style={{ border: '1px solid rgba(255,255,255,0.5)', color: 'white' }}
+                >
+                  Пишете ни
+                </a>
+              </div>
             </div>
 
             <Link
