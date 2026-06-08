@@ -127,8 +127,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start h-full">
             {/* Left: Character Image — z-5 places the figure behind the benefits box (z-20) */}
             <div className="relative order-2 lg:order-1 flex justify-center items-start lg:mt-0" style={{ zIndex: 5 }}>
-              {/* Left-side floating badges — stacked vertically */}
-              <div className="absolute left-0 top-8 flex flex-col gap-10 z-10" style={{ transform: 'translateX(-50%)' }}>
+              {/* Left-side floating badges — stacked vertically, anchored inside the image on mobile, offset on lg */}
+              <div className="absolute left-2 lg:-left-6 top-8 flex flex-col gap-3 z-10">
                 {/* Badge 1: Доверени Професионалисти — always at top */}
                 <div
                   className="flex items-center gap-3 px-4 py-3 rounded-xl"
@@ -173,7 +173,7 @@ export default function HomePage() {
 
                 {/* Badge 3: Години опит */}
                 <div
-                  className="flex items-center gap-5 px-4 py-3 rounded-xl"
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl"
                   style={{
                     background: '#1A1A1A',
                     border: '1px solid rgba(255,255,255,0.12)',
