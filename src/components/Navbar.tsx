@@ -46,7 +46,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex flex-col leading-none group">
             <span className="text-2xl font-bold text-white tracking-tight group-hover:text-orange-500 transition-colors duration-200">
-              YRV Pro Cleaning
+              YRV ProClean
             </span>
           </Link>
 
