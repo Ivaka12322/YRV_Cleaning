@@ -128,9 +128,40 @@ export default function HomePage() {
             {/* Left: Character Image — z-5 places the figure behind the benefits box (z-20) */}
             <div className="relative order-2 lg:order-1 flex justify-center items-start lg:mt-0" style={{ zIndex: 5 }}>
 
-              {/* Badge 1: Доверени — left side, face level */}
+              {/* ── DESKTOP: three badges stacked vertically on the left ── */}
+              <div className="hidden lg:flex absolute -left-6 top-8 flex-col gap-4 z-10">
+                {[
+                  { icon: <ShieldCheck size={16} color="#FF6B35" />, title: 'Доверени', sub: 'Професионалисти' },
+                  { icon: <Calendar size={16} color="#FF6B35" />, title: 'Бърз', sub: 'Отговор' },
+                  { icon: <Sparkles size={16} color="#FF6B35" />, title: '10+', sub: 'Години опит' },
+                ].map(({ icon, title, sub }) => (
+                  <div
+                    key={title}
+                    className="flex items-center gap-3 px-4 py-3 rounded-xl"
+                    style={{
+                      background: '#1A1A1A',
+                      border: '1px solid rgba(255,255,255,0.12)',
+                      boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
+                    }}
+                  >
+                    <div
+                      className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ background: 'rgba(255,107,53,0.2)' }}
+                    >
+                      {icon}
+                    </div>
+                    <div>
+                      <p className="text-xs font-bold leading-none" style={{ color: '#FF6B35' }}>{title}</p>
+                      <p className="text-xs leading-none mt-0.5" style={{ color: '#FF6B35' }}>{sub}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* ── MOBILE: three individually positioned badges ── */}
+              {/* Badge 1: left side, face level */}
               <div
-                className="absolute left-2 lg:-left-6 z-10 flex flex-col items-center gap-2 px-4 py-3 rounded-xl w-fit"
+                className="lg:hidden absolute left-2 z-10 flex flex-col items-center gap-2 px-4 py-3 rounded-xl w-fit"
                 style={{
                   top: '14%',
                   background: '#1A1A1A',
@@ -138,10 +169,7 @@ export default function HomePage() {
                   boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
                 }}
               >
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(255,107,53,0.2)' }}
-                >
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(255,107,53,0.2)' }}>
                   <ShieldCheck size={16} color="#FF6B35" />
                 </div>
                 <div className="text-center">
@@ -150,9 +178,9 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Badge 2: Бърз Отговор — right side, arm area */}
+              {/* Badge 2: right side, arm area */}
               <div
-                className="absolute right-2 lg:-right-6 z-10 flex flex-col items-center gap-2 px-4 py-3 rounded-xl w-fit"
+                className="lg:hidden absolute right-2 z-10 flex flex-col items-center gap-2 px-4 py-3 rounded-xl w-fit"
                 style={{
                   top: '56%',
                   background: '#1A1A1A',
@@ -160,10 +188,7 @@ export default function HomePage() {
                   boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
                 }}
               >
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(255,107,53,0.2)' }}
-                >
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(255,107,53,0.2)' }}>
                   <Calendar size={16} color="#FF6B35" />
                 </div>
                 <div className="text-center">
@@ -172,9 +197,9 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Badge 3: 10+ Години — left side, near bottom */}
+              {/* Badge 3: left side, near bottom */}
               <div
-                className="absolute left-2 lg:-left-6 z-10 flex flex-col items-center gap-2 px-4 py-3 rounded-xl w-fit"
+                className="lg:hidden absolute left-2 z-10 flex flex-col items-center gap-2 px-4 py-3 rounded-xl w-fit"
                 style={{
                   bottom: '18%',
                   background: '#1A1A1A',
@@ -182,10 +207,7 @@ export default function HomePage() {
                   boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
                 }}
               >
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                  style={{ background: 'rgba(255,107,53,0.2)' }}
-                >
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(255,107,53,0.2)' }}>
                   <Sparkles size={16} color="#FF6B35" />
                 </div>
                 <div className="text-center">
