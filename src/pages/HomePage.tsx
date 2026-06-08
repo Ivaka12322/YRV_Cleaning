@@ -127,70 +127,67 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start h-full">
             {/* Left: Character Image — z-5 places the figure behind the benefits box (z-20) */}
             <div className="relative order-2 lg:order-1 flex justify-center items-start lg:mt-0" style={{ zIndex: 5 }}>
-              {/* Left-side floating badges — stacked vertically, anchored inside the image on mobile, offset on lg */}
-              <div className="absolute left-2 lg:-left-6 top-8 flex flex-col gap-3 z-10">
-                {/* Badge 1: Доверени Професионалисти — always at top */}
-                <div
-                  className="flex items-center gap-3 px-4 py-3 rounded-xl"
-                  style={{
-                    background: '#1A1A1A',
-                    border: '1px solid rgba(255,255,255,0.12)',
-                    boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-                  }}
-                >
-                  <div
-                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'rgba(255,107,53,0.2)' }}
-                  >
-                    <ShieldCheck size={16} color="#FF6B35" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-white leading-none">Доверени</p>
-                    <p className="text-xs text-gray-500 leading-none mt-0.5">Професионалисти</p>
-                  </div>
-                </div>
 
-                {/* Badge 2: Бърз Отговор */}
+              {/* Badge 1: Доверени — left side, below the face (~45% from top) */}
+              <div
+                className="absolute left-2 lg:-left-6 z-10 flex flex-col items-center gap-2 px-4 py-3 rounded-xl w-fit"
+                style={{
+                  top: '42%',
+                  background: 'linear-gradient(135deg, #FF6B35, #FF8C5A)',
+                  boxShadow: '0 8px 24px rgba(255,107,53,0.45)',
+                }}
+              >
                 <div
-                  className="flex items-center gap-3 px-4 py-3 rounded-xl"
-                  style={{
-                    background: '#1A1A1A',
-                    border: '1px solid rgba(255,255,255,0.12)',
-                    boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-                  }}
+                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(255,255,255,0.2)' }}
                 >
-                  <div
-                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'rgba(255,107,53,0.2)' }}
-                  >
-                    <Calendar size={16} color="#FF6B35" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-white leading-none">Бърз</p>
-                    <p className="text-xs text-gray-500 leading-none mt-0.5">Отговор</p>
-                  </div>
+                  <ShieldCheck size={16} color="white" />
                 </div>
+                <div className="text-center">
+                  <p className="text-xs font-bold text-white leading-none">Доверени</p>
+                  <p className="text-xs text-white/80 leading-none mt-0.5">Профес.</p>
+                </div>
+              </div>
 
-                {/* Badge 3: Години опит */}
+              {/* Badge 2: Бърз Отговор — right side, arm area (~58% from top) */}
+              <div
+                className="absolute right-2 lg:-right-6 z-10 flex flex-col items-center gap-2 px-4 py-3 rounded-xl w-fit"
+                style={{
+                  top: '56%',
+                  background: 'linear-gradient(135deg, #FF6B35, #FF8C5A)',
+                  boxShadow: '0 8px 24px rgba(255,107,53,0.45)',
+                }}
+              >
                 <div
-                  className="flex items-center gap-3 px-4 py-3 rounded-xl"
-                  style={{
-                    background: '#1A1A1A',
-                    border: '1px solid rgba(255,255,255,0.12)',
-                    boxShadow: '0 8px 24px rgba(0,0,0,0.4)',
-                    zIndex: 6,
-                  }}
+                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(255,255,255,0.2)' }}
                 >
-                  <div
-                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: 'rgba(255,107,53,0.2)' }}
-                  >
-                    <Sparkles size={16} color="#FF6B35" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-white leading-none">10+</p>
-                    <p className="text-xs text-gray-500 leading-none mt-0.5">Години опит</p>
-                  </div>
+                  <Calendar size={16} color="white" />
+                </div>
+                <div className="text-center">
+                  <p className="text-xs font-bold text-white leading-none">Бърз</p>
+                  <p className="text-xs text-white/80 leading-none mt-0.5">Отговор</p>
+                </div>
+              </div>
+
+              {/* Badge 3: 10+ Години — left side, near bottom */}
+              <div
+                className="absolute left-2 lg:-left-6 z-10 flex flex-col items-center gap-2 px-4 py-3 rounded-xl w-fit"
+                style={{
+                  bottom: '18%',
+                  background: 'linear-gradient(135deg, #FF6B35, #FF8C5A)',
+                  boxShadow: '0 8px 24px rgba(255,107,53,0.45)',
+                }}
+              >
+                <div
+                  className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'rgba(255,255,255,0.2)' }}
+                >
+                  <Sparkles size={16} color="white" />
+                </div>
+                <div className="text-center">
+                  <p className="text-xs font-bold text-white leading-none">10+</p>
+                  <p className="text-xs text-white/80 leading-none mt-0.5">Години опит</p>
                 </div>
               </div>
 
