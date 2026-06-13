@@ -139,7 +139,7 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
         {/* Top row: brand + nav */}
         <div className="flex flex-col md:flex-row items-center md:items-center justify-between gap-6 mb-8">
           <div className="text-center md:text-left">
-            <div className="text-xl font-bold text-white mb-1">YRV</div>
+            <div className="text-xl font-bold text-white mb-1">YRV ProClean</div>
             <p className="text-xs text-gray-600">Премиум почистващи услуги в София</p>
           </div>
           <div className="flex flex-wrap gap-6 justify-center md:justify-end">
