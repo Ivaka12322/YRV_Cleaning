@@ -180,7 +180,7 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
           className="pt-5 flex flex-col sm:flex-row items-center justify-between gap-2"
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
-          <p className="text-xs text-gray-600 text-center sm:text-left">© 2026 YRV Premium Cleaning. All rights reserved.</p>
+          <p className="text-xs text-gray-600 text-center sm:text-left">© 2026 YRV ProClean. All rights reserved.</p>
           <p className="text-xs text-gray-600 text-center sm:text-right">
             Сайтът е изготвен от{' '}
             <a
