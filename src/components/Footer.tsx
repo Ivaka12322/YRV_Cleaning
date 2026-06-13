@@ -108,7 +108,7 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
           style={{ borderColor: 'rgba(255,255,255,0.06)' }}
         >
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-            <p className="text-xs text-gray-600 text-center md:text-left">© 2026 YRV ProClean. All rights reserved.</p>
+            <p className="text-xs text-gray-600 text-center md:text-left">© 2026 YRV ProClean. Всички права запазени.</p>
             <p className="text-xs text-gray-600 text-center md:text-right">
               Сайтът е изготвен от{' '}
               <a
@@ -180,7 +180,7 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
           className="pt-5 flex flex-col sm:flex-row items-center justify-between gap-2"
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
-          <p className="text-xs text-gray-600 text-center sm:text-left">© 2026 YRV ProClean. All rights reserved.</p>
+          <p className="text-xs text-gray-600 text-center sm:text-left">© 2026 YRV ProClean. Всички права запазени.</p>
           <p className="text-xs text-gray-600 text-center sm:text-right">
             Сайтът е изготвен от{' '}
             <a
