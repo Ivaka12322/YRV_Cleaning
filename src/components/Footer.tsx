@@ -108,7 +108,7 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
           style={{ borderColor: 'rgba(255,255,255,0.06)' }}
         >
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-            <p className="text-xs text-gray-600 text-center md:text-left">© 2026 YRV Premium Cleaning. All rights reserved.</p>
+            <p className="text-xs text-gray-600 text-center md:text-left">© 2026 YRV ProClean. All rights reserved.</p>
             <p className="text-xs text-gray-600 text-center md:text-right">
               Сайтът е изготвен от{' '}
               <a
