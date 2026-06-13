@@ -28,7 +28,7 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-8">
             {/* Brand */}
             <div>
-              <div className="text-2xl font-bold text-white mb-1">YRV</div>
+              <div className="text-2xl font-bold text-white mb-1">YRV ProClean</div>
               <p className="text-sm text-gray-500 leading-relaxed mt-3">
                 Премиум стандарти в<br />професионалното почистване.
               </p>
