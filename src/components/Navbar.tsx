@@ -45,7 +45,13 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex flex-col leading-none group">
-            <span className="text-2xl font-bold text-white tracking-tight group-hover:text-orange-500 transition-colors duration-200">
+            <span
+              className="text-2xl font-bold tracking-tight transition-colors duration-200"
+              style={{
+                color: '#FF6B35',
+                textShadow: '0 0 6px rgba(255,255,255,0.55), 0 0 14px rgba(255,255,255,0.25)',
+              }}
+            >
               YRV ProClean
             </span>
           </Link>
@@ -114,7 +120,13 @@ export default function Navbar() {
       >
         <div className="flex items-center justify-between px-6 h-20">
           <Link to="/" className="flex flex-col leading-none">
-            <span className="text-2xl font-bold text-white">YRV</span>
+            <span
+              className="text-2xl font-bold tracking-tight"
+              style={{
+                color: '#FF6B35',
+                textShadow: '0 0 6px rgba(255,255,255,0.55), 0 0 14px rgba(255,255,255,0.25)',
+              }}
+            >YRV</span>
             <span className="text-[10px] text-gray-500 uppercase tracking-widest leading-none mt-0.5">Почистване</span>
           </Link>
           <button
