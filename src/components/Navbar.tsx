@@ -49,7 +49,7 @@ export default function Navbar() {
               className="text-2xl font-bold tracking-tight transition-colors duration-200"
               style={{
                 color: '#FF6B35',
-                textShadow: '0 0 6px rgba(255,255,255,0.55), 0 0 14px rgba(255,255,255,0.25)',
+                textShadow: '0 0 3px rgba(255,255,255,0.95), 0 0 8px rgba(255,255,255,0.6), 0 0 18px rgba(255,255,255,0.25)',
               }}
             >
               YRV ProClean
@@ -124,7 +124,7 @@ export default function Navbar() {
               className="text-2xl font-bold tracking-tight"
               style={{
                 color: '#FF6B35',
-                textShadow: '0 0 6px rgba(255,255,255,0.55), 0 0 14px rgba(255,255,255,0.25)',
+                textShadow: '0 0 3px rgba(255,255,255,0.95), 0 0 8px rgba(255,255,255,0.6), 0 0 18px rgba(255,255,255,0.25)',
               }}
             >YRV</span>
             <span className="text-[10px] text-gray-500 uppercase tracking-widest leading-none mt-0.5">Почистване</span>
