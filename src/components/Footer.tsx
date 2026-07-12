@@ -184,7 +184,7 @@ export default function Footer({ variant = 'simple' }: FooterProps) {
           <p className="text-xs text-gray-600 text-center sm:text-right">
             Сайтът е изготвен от{' '}
             <a
-              href="https://avltechsolutions.org"
+              href=" https://avl-websites.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-orange-500 transition-colors"
